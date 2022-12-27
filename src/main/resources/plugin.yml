@@ -1,7 +1,0 @@
-name: OutspendingUtils
-version: '${project.version}'
-main: me.outspending.outspendingutils.OutspendingUtils
-api-version: 1.19
-authors: [ Outspending ]
-description: Tools to make my life easier (1.19)
-website: https://github.com/oShadxw/OutspendingUtils
