@@ -1,0 +1,7 @@
+name: SpendingUtils
+version: '${project.version}'
+main: me.outspending.spendingutils.SpendingUtils
+api-version: 1.19
+authors: [ Outspending ]
+commands:
+  testing:
