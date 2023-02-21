@@ -6,11 +6,9 @@ import org.bukkit.OfflinePlayer;
 
 public class SEROfflinePlayer implements Serialization<OfflinePlayer> {
 
-    private Class<?> offlinePlayer = OfflinePlayer.class;
-
     @Override
-    public Class<?> getClazz() {
-        return offlinePlayer;
+    public Class<OfflinePlayer> getClazz() {
+        return OfflinePlayer.class;
     }
 
     @Override

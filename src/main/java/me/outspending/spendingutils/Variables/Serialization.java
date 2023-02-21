@@ -4,9 +4,8 @@ import javax.xml.stream.Location;
 
 public interface Serialization<T> {
 
-    Class<?> clazz = null;
 
-    public Class<?> getClazz();
+    public Class<T> getClazz();
 
     public String serialize(T value);
     public T deserialize(String string);

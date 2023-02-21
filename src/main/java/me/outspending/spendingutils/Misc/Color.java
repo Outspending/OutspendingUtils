@@ -7,22 +7,13 @@ import java.util.regex.Pattern;
 
 public class Color {
 
-    public static String translateColor(String message) {
-        Pattern pattern = Pattern.compile("#[a-zA-Z]{6}");
-        Matcher matcher = pattern.matcher(message);
+    public static final Pattern HEX_PATTERN = Pattern.compile("#[a-fA-F0-9]{6}");
+
+    public static String formatHexColorCodes(String string) {
+        Matcher matcher = HEX_PATTERN.matcher(string);
         while (matcher.find()) {
-            String hexCode = message.substring(matcher.start(), matcher.end());
-            String replaceSharp = hexCode.replace("#", "x");
-
-            char[] ch = replaceSharp.toCharArray();
-            StringBuilder builder = new StringBuilder();
-            for (char c : ch) {
-                builder.append("§").append(c);
-            }
-
-            message = message.replaceAll(hexCode, builder.toString());
-            matcher = pattern.matcher(message);
+            string = string.replace(matcher.group(), "" + ChatColor.getByChar(matcher.group()));
         }
-        return ChatColor.translateAlternateColorCodes('&', message);
+        return string;
     }
 }

@@ -4,11 +4,10 @@ import me.outspending.spendingutils.Variables.Serialization;
 
 public class SERBoolean implements Serialization<Boolean> {
 
-    private Class<?> aBoolean = Boolean.class;
 
     @Override
-    public Class<?> getClazz() {
-        return aBoolean;
+    public Class<Boolean> getClazz() {
+        return Boolean.class;
     }
 
     @Override

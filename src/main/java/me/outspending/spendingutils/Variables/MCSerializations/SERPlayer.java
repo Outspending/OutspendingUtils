@@ -6,11 +6,9 @@ import org.bukkit.entity.Player;
 
 public class SERPlayer implements Serialization<Player> {
 
-    private Class<?> player = Player.class;
-
     @Override
-    public Class<?> getClazz() {
-        return player;
+    public Class<Player> getClazz() {
+        return Player.class;
     }
 
     @Override

@@ -4,11 +4,9 @@ import me.outspending.spendingutils.Variables.Serialization;
 
 public class SERString implements Serialization<String> {
 
-    private Class<?> string = String.class;
-
     @Override
-    public Class<?> getClazz() {
-        return string;
+    public Class<String> getClazz() {
+        return String.class;
     }
 
     @Override

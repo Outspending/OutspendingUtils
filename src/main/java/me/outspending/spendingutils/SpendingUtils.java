@@ -28,15 +28,7 @@ public final class SpendingUtils {
         Bukkit.getPluginManager().registerEvents(new GUIEvents(), plugin);
 
         try {
-            VariableSerializing.register(new SERString());
-            VariableSerializing.register(new SERLocation());
-            VariableSerializing.register(new SERPlayer());
-            VariableSerializing.register(new SEROfflinePlayer());
-            VariableSerializing.register(new SERInteger());
-            VariableSerializing.register(new SERDouble());
-            VariableSerializing.register(new SERFloat());
-            VariableSerializing.register(new SERBoolean());
-            VariableSerializing.register(new SERLong());
+            VariableSerializing.registerPackage("me.outspending.spendingutils.Variables", "MCSerializations");
         } catch (DuplicateSerializationException e) {
             throw new RuntimeException(e);
         }

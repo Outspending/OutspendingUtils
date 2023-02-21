@@ -4,11 +4,9 @@ import me.outspending.spendingutils.Variables.Serialization;
 
 public class SERInteger implements Serialization<Integer> {
 
-    private Class<?> integer = Integer.class;
-
     @Override
-    public Class<?> getClazz() {
-        return integer;
+    public Class<Integer> getClazz() {
+        return Integer.class;
     }
 
     @Override

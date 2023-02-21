@@ -4,11 +4,9 @@ import me.outspending.spendingutils.Variables.Serialization;
 
 public class SERLong implements Serialization<Long> {
 
-    private Class<?> aLong = Long.class;
-
     @Override
-    public Class<?> getClazz() {
-        return aLong;
+    public Class<Long> getClazz() {
+        return Long.class;
     }
 
     @Override

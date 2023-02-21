@@ -4,11 +4,10 @@ import me.outspending.spendingutils.Variables.Serialization;
 
 public class SERFloat implements Serialization<Float> {
 
-    private Class<?> aFloat = Float.class;
 
     @Override
-    public Class<?> getClazz() {
-        return aFloat;
+    public Class<Float> getClazz() {
+        return Float.class;
     }
 
     @Override

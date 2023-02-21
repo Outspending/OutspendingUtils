@@ -4,11 +4,9 @@ import me.outspending.spendingutils.Variables.Serialization;
 
 public class SERDouble implements Serialization<Double> {
 
-    private Class<?> aDouble = Double.class;
-
     @Override
-    public Class<?> getClazz() {
-        return aDouble;
+    public Class<Double> getClazz() {
+        return Double.class;
     }
 
     @Override

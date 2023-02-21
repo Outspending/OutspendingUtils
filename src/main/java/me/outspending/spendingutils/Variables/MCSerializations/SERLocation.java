@@ -6,11 +6,9 @@ import org.bukkit.Location;
 
 public class SERLocation implements Serialization<Location> {
 
-    private Class<?> location = Location.class;
-
     @Override
-    public Class<?> getClazz() {
-        return location;
+    public Class<Location> getClazz() {
+        return Location.class;
     }
 
     @Override
